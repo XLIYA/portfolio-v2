@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilya Aghaei — Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">ILYA<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-label">Frontend Developer · Based in Iran</div>
+      <h1 class="hero-name">
+        <span class="line">ILYA</span>
+        <span class="line dim">AGHAEI</span>
+      </h1>
+      <p class="hero-desc">
+        I build fast, production-grade web interfaces with React, Next.js, and TypeScript.
+        Clean architecture. Ownership mindset. Zero fluff.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get in touch ↓</a>
+        <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="btn-ghost">View Work ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years experience</div>
+        </div>
+        <div>
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Tech stack</div>
+        </div>
+        <div>
+          <div class="stat-num">2</div>
+          <div class="stat-label">Production apps</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="float-tag"><span class="dot">▪</span>React / Next.js</div>
+      <div class="float-tag"><span class="dot">▪</span>TypeScript</div>
+      <div class="photo-frame">
+        <img src="ILYA.png" alt="Ilya Aghaei" onerror="this.style.background='#1a1a1a';this.removeAttribute('src')" />
+      </div>
+      <div class="float-tag"><span class="dot">▪</span>Redux / RTK</div>
+      <div class="hero-social">
+        <a href="https://github.com/XLIYA" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:xilyag@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-item"><span>◆</span>React</span>
+      <span class="marquee-item"><span>◆</span>Next.js</span>
+      <span class="marquee-item"><span>◆</span>TypeScript</span>
+      <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
+      <span class="marquee-item"><span>◆</span>TanStack Query</span>
+      <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
+      <span class="marquee-item"><span>◆</span>Framer Motion</span>
+      <span class="marquee-item"><span>◆</span>REST APIs</span>
+      <span class="marquee-item"><span>◆</span>WebSockets</span>
+      <span class="marquee-item"><span>◆</span>GraphQL</span>
+      <span class="marquee-item"><span>◆</span>SSR / ISR / CSR</span>
+      <span class="marquee-item"><span>◆</span>JWT Auth</span>
+      <span class="marquee-item"><span>◆</span>Figma</span>
+      <span class="marquee-item"><span>◆</span>Git & Gitflow</span>
+
+      <span class="marquee-item"><span>◆</span>React</span>
+      <span class="marquee-item"><span>◆</span>Next.js</span>
+      <span class="marquee-item"><span>◆</span>TypeScript</span>
+      <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
+      <span class="marquee-item"><span>◆</span>TanStack Query</span>
+      <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
+      <span class="marquee-item"><span>◆</span>Framer Motion</span>
+      <span class="marquee-item"><span>◆</span>REST APIs</span>
+      <span class="marquee-item"><span>◆</span>WebSockets</span>
+      <span class="marquee-item"><span>◆</span>GraphQL</span>
+      <span class="marquee-item"><span>◆</span>SSR / ISR / CSR</span>
+      <span class="marquee-item"><span>◆</span>JWT Auth</span>
+      <span class="marquee-item"><span>◆</span>Figma</span>
+      <span class="marquee-item"><span>◆</span>Git & Gitflow</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about-left">
+      <div class="section-tag reveal">About Me</div>
+      <h2 class="section-heading reveal">Engineering-<em>first</em> mindset</h2>
+      <div class="about-text reveal">
+        <p>
+          I work best in collaborative environments where ideas are challenged, refined, and shipped.
+          I take full ownership of everything I build — from architecture decisions to final delivery —
+          without needing constant supervision.
+        </p>
+        <p>
+          My approach to frontend is engineering-driven: predictable state management,
+          clean component architecture, and long-term maintainability over quick hacks.
+          I stay effective under pressure and adapt fast to evolving requirements.
+        </p>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="info-row reveal">
+        <div class="info-label">Location</div>
+        <div class="info-value">Karaj, Alborz — Iran</div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">Email</div>
+        <div class="info-value"><a href="mailto:xilyag@gmail.com">xilyag@gmail.com</a></div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">GitHub</div>
+        <div class="info-value"><a href="https://github.com/XLIYA" target="_blank" rel="noopener">github.com/XLIYA</a></div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">LinkedIn</div>
+        <div class="info-value"><a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">ilya-ag</a></div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">Education</div>
+        <div class="info-value">Computer Engineering — Islamic Azad University, Karaj</div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">Language</div>
+        <div class="info-value">Persian (Native) · English (Intermediate)</div>
+      </div>
+      <div class="info-row reveal">
+        <div class="info-label">Status</div>
+        <div class="info-value status-value">
+          <span class="status-dot"></span>
+          Open to opportunities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="exp-header">
+      <div>
+        <div class="section-tag reveal">Experience</div>
+        <h2 class="section-heading reveal">Where I've<br><em>shipped</em></h2>
+      </div>
+      <p class="exp-intro reveal">
+        Professional work building production systems for real users —
+        not just side projects. Every item here is live and in active use.
+      </p>
+    </div>
+
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-date">2023 — Present</div>
+          <div class="exp-company">Asman Web</div>
+          <div class="exp-location">Karaj, Iran</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Frontend Developer</div>
+          <p class="exp-desc">
+            Sole frontend developer responsible for the complete UI of an automotive dealership management platform.
+            Built two separate production applications — an internal staff portal and a customer-facing client portal —
+            from architecture to deployment. Designed data-flow between systems, implemented real-time updates,
+            role-based access control, and complex form workflows.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Redux Toolkit</span>
+            <span class="tag">TanStack Query</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">JWT Auth</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Socket.io</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-header">
+      <div>
+        <div class="section-tag reveal">Tech Stack</div>
+        <h2 class="section-heading reveal">What I <em>build</em> with</h2>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-col reveal">
+        <div class="skill-col-label">Core Framework</div>
+        <ul class="skill-list">
+          <li>React (Functional + Hooks)</li>
+          <li>Next.js (App Router)</li>
+          <li>TypeScript</li>
+          <li>JavaScript (ES2022+)</li>
+          <li>JSX / Component Architecture</li>
+          <li>Atomic Design Pattern</li>
+        </ul>
+      </div>
+      <div class="skill-col reveal">
+        <div class="skill-col-label">State & Data</div>
+        <ul class="skill-list">
+          <li>Redux Toolkit</li>
+          <li>Redux Thunk / Persist</li>
+          <li>TanStack React Query</li>
+          <li>Context API + useReducer</li>
+          <li>React Hook Form + Zod</li>
+          <li>Axios / Fetch</li>
+        </ul>
+      </div>
+      <div class="skill-col reveal">
+        <div class="skill-col-label">Styling & UI</div>
+        <ul class="skill-list">
+          <li>Tailwind CSS</li>
+          <li>Framer Motion</li>
+          <li>CSS Modules / JSS</li>
+          <li>Styled Components</li>
+          <li>Material UI / Headless UI</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </div>
+      <div class="skill-col reveal">
+        <div class="skill-col-label">Network & Tools</div>
+        <ul class="skill-list">
+          <li>REST API / JSON</li>
+          <li>WebSockets / Socket.io</li>
+          <li>GraphQL</li>
+          <li>JWT + Cookie Auth</li>
+          <li>SSR / ISR / CSR / SSG</li>
+          <li>Git & Gitflow / Figma</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="projects-header">
+      <div>
+        <div class="section-tag reveal">Selected Work</div>
+        <h2 class="section-heading reveal">Production<br><em>projects</em></h2>
+      </div>
+      <p class="projects-intro reveal">
+        Both projects are live, serving real users in production.
+        Built as the sole frontend developer with full ownership of architecture, UX, and delivery.
+      </p>
+    </div>
+
+    <div class="project-card reveal-scale">
+      <div class="project-num">01</div>
+      <div class="project-card-inner">
+        <div>
+          <div class="project-platform">Asman Web Platform · Internal Tool</div>
+          <h3 class="project-title">Parts Lifecycle Management System</h3>
+          <p class="project-desc">
+            Designed and built the complete frontend architecture for an automotive parts tracking system
+            used daily by dealership staff. The system manages the full lifecycle of vehicle parts —
+            from intake to delivery — with real-time status updates and role-based permissions.
+            Implemented complex multi-step workflows, data tables with filtering/sorting,
+            and a notification system for critical status changes.
+          </p>
+          <div class="project-outcome">
+            <div class="outcome-icon">→</div>
+            <div class="outcome-text">
+              <strong class="accent-text">Result:</strong> Eliminated manual spreadsheet tracking,
+              reduced follow-up calls between teams, and significantly improved operational transparency across the dealership.
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Next.js · App Router</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Redux Toolkit</span>
+            <span class="tag">Server Actions</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-tech-label">Key challenges solved</div>
+            <ul class="skill-list project-skill-list">
+              <li>Complex state across multi-step flows</li>
+              <li>Role-based UI (staff vs. manager)</li>
+              <li>Real-time status sync via polling</li>
+              <li>Offline-resilient data handling</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="project-link">
+              <span>View Live</span>
+              <span class="project-link-icon">↗</span>
+            </a>
+            <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="project-link">
+              <span>GitHub</span>
+              <span class="project-link-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal-scale project-card-spaced">
+      <div class="project-num">02</div>
+      <div class="project-card-inner">
+        <div>
+          <div class="project-platform">Asman Web Platform · Customer Portal</div>
+          <h3 class="project-title">Customer Follow-Up & Status Portal</h3>
+          <p class="project-desc">
+            Built a separate customer-facing web application with a completely different UX focus —
+            clarity and simplicity for non-technical users. The portal gives customers real-time visibility
+            into their vehicle service and parts orders. Deliberately architected with clear data boundaries
+            from the internal system, with API-driven status updates and a mobile-first responsive design.
+          </p>
+          <div class="project-outcome">
+            <div class="outcome-icon">→</div>
+            <div class="outcome-text">
+              <strong class="accent-text">Result:</strong> Reduced inbound customer support requests,
+              increased customer trust through proactive communication, and freed up staff time from manual status calls.
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">React · Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">TanStack Query</span>
+            <span class="tag">API Integration</span>
+            <span class="tag">Mobile-first</span>
+          </div>
+        </div>
+        <div class="project-meta">
+          <div>
+            <div class="project-tech-label">Key challenges solved</div>
+            <ul class="skill-list project-skill-list">
+              <li>System boundary — separate from staff portal</li>
+              <li>Mobile-first for non-tech users</li>
+              <li>Real-time order tracking UI</li>
+              <li>Optimistic UI for responsiveness</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="project-link">
+              <span>View Live</span>
+              <span class="project-link-icon">↗</span>
+            </a>
+            <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="project-link">
+              <span>GitHub</span>
+              <span class="project-link-icon">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-left">
+      <div class="section-tag reveal">Contact</div>
+      <h2 class="contact-cta reveal">
+        Let's build<br />
+        <em>something great.</em>
+      </h2>
+      <p class="contact-sub reveal">
+        I'm looking for roles where code quality, ownership, and system thinking matter.
+        Open to full-time positions, freelance, and remote work.
+      </p>
+      <a href="mailto:xilyag@gmail.com" class="btn-primary reveal contact-btn">
+        Send a message →
+      </a>
+    </div>
+    <div class="contact-right">
+      <a href="mailto:xilyag@gmail.com" class="contact-link reveal">
+        <div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-value">xilyag@gmail.com</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener" class="contact-link reveal">
+        <div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-value">ilya-ag</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="contact-link reveal">
+        <div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-value">XLIYA</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="tel:+989101877006" class="contact-link reveal">
+        <div>
+          <div class="contact-link-label">Phone</div>
+          <div class="contact-link-value">+98 910 187 7006</div>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">ILYA<span>.</span></div>
+    <div class="footer-copy">© 2025 Ilya Aghaei — All rights reserved</div>
+    <div class="footer-links">
+      <a href="https://github.com/XLIYA" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:xilyag@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
