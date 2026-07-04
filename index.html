@@ -3,10 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ilya Aghaei — Frontend Developer</title>
+  <meta
+    name="description"
+    content="Ilya Aghaei is a front-end developer building production-grade React, Next.js, and TypeScript web applications."
+  />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Ilya Aghaei — Front-End Developer" />
+  <meta
+    property="og:description"
+    content="React, Next.js, TypeScript, clean UI architecture, and production web applications."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="ILYA.png" />
+  <title>Ilya Aghaei — Front-End Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="ILYA.png" />
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap"
     rel="stylesheet"
@@ -15,13 +28,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <a href="#about" class="skip-link">Skip to content</a>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-  <nav id="nav">
-    <a href="#hero" class="nav-logo">ILYA<span>.</span></a>
+  <nav id="nav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo" aria-label="Ilya Aghaei home">ILYA<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -31,405 +46,461 @@
     <a href="#contact" class="nav-cta">Let's Talk</a>
   </nav>
 
-  <section id="hero">
-    <div class="hero-left">
-      <div class="hero-label">Frontend Developer · Based in Iran</div>
-      <h1 class="hero-name">
-        <span class="line">ILYA</span>
-        <span class="line dim">AGHAEI</span>
-      </h1>
-      <p class="hero-desc">
-        I build fast, production-grade web interfaces with React, Next.js, and TypeScript.
-        Clean architecture. Ownership mindset. Zero fluff.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get in touch ↓</a>
-        <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="btn-ghost">View Work ↗</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">2+</div>
-          <div class="stat-label">Years experience</div>
-        </div>
-        <div>
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Tech stack</div>
-        </div>
-        <div>
-          <div class="stat-num">2</div>
-          <div class="stat-label">Production apps</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="float-tag"><span class="dot">▪</span>React / Next.js</div>
-      <div class="float-tag"><span class="dot">▪</span>TypeScript</div>
-      <div class="photo-frame">
-        <img src="ILYA.png" alt="Ilya Aghaei" onerror="this.style.background='#1a1a1a';this.removeAttribute('src')" />
-      </div>
-      <div class="float-tag"><span class="dot">▪</span>Redux / RTK</div>
-      <div class="hero-social">
-        <a href="https://github.com/XLIYA" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:xilyag@gmail.com">Email</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <span class="marquee-item"><span>◆</span>React</span>
-      <span class="marquee-item"><span>◆</span>Next.js</span>
-      <span class="marquee-item"><span>◆</span>TypeScript</span>
-      <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
-      <span class="marquee-item"><span>◆</span>TanStack Query</span>
-      <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
-      <span class="marquee-item"><span>◆</span>Framer Motion</span>
-      <span class="marquee-item"><span>◆</span>REST APIs</span>
-      <span class="marquee-item"><span>◆</span>WebSockets</span>
-      <span class="marquee-item"><span>◆</span>GraphQL</span>
-      <span class="marquee-item"><span>◆</span>SSR / ISR / CSR</span>
-      <span class="marquee-item"><span>◆</span>JWT Auth</span>
-      <span class="marquee-item"><span>◆</span>Figma</span>
-      <span class="marquee-item"><span>◆</span>Git & Gitflow</span>
-
-      <span class="marquee-item"><span>◆</span>React</span>
-      <span class="marquee-item"><span>◆</span>Next.js</span>
-      <span class="marquee-item"><span>◆</span>TypeScript</span>
-      <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
-      <span class="marquee-item"><span>◆</span>TanStack Query</span>
-      <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
-      <span class="marquee-item"><span>◆</span>Framer Motion</span>
-      <span class="marquee-item"><span>◆</span>REST APIs</span>
-      <span class="marquee-item"><span>◆</span>WebSockets</span>
-      <span class="marquee-item"><span>◆</span>GraphQL</span>
-      <span class="marquee-item"><span>◆</span>SSR / ISR / CSR</span>
-      <span class="marquee-item"><span>◆</span>JWT Auth</span>
-      <span class="marquee-item"><span>◆</span>Figma</span>
-      <span class="marquee-item"><span>◆</span>Git & Gitflow</span>
-    </div>
-  </div>
-
-  <section id="about">
-    <div class="about-left">
-      <div class="section-tag reveal">About Me</div>
-      <h2 class="section-heading reveal">Engineering-<em>first</em> mindset</h2>
-      <div class="about-text reveal">
-        <p>
-          I work best in collaborative environments where ideas are challenged, refined, and shipped.
-          I take full ownership of everything I build — from architecture decisions to final delivery —
-          without needing constant supervision.
+  <main>
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-left">
+        <div class="hero-label">Front-End Developer · React · Next.js · TypeScript</div>
+        <h1 class="hero-name">
+          <span class="line">ILYA</span>
+          <span class="line dim">AGHAEI</span>
+        </h1>
+        <p class="hero-desc">
+          I build responsive, production-grade web applications with clean component architecture,
+          predictable state management, and polished user experiences for real products.
         </p>
-        <p>
-          My approach to frontend is engineering-driven: predictable state management,
-          clean component architecture, and long-term maintainability over quick hacks.
-          I stay effective under pressure and adapt fast to evolving requirements.
-        </p>
-      </div>
-    </div>
-    <div class="about-right">
-      <div class="info-row reveal">
-        <div class="info-label">Location</div>
-        <div class="info-value">Karaj, Alborz — Iran</div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">Email</div>
-        <div class="info-value"><a href="mailto:xilyag@gmail.com">xilyag@gmail.com</a></div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">GitHub</div>
-        <div class="info-value"><a href="https://github.com/XLIYA" target="_blank" rel="noopener">github.com/XLIYA</a></div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">LinkedIn</div>
-        <div class="info-value"><a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">ilya-ag</a></div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">Education</div>
-        <div class="info-value">Computer Engineering — Islamic Azad University, Karaj</div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">Language</div>
-        <div class="info-value">Persian (Native) · English (Intermediate)</div>
-      </div>
-      <div class="info-row reveal">
-        <div class="info-label">Status</div>
-        <div class="info-value status-value">
-          <span class="status-dot"></span>
-          Open to opportunities
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View projects ↓</a>
+          <a href="mailto:xilyag@gmail.com" class="btn-ghost">Hire me ↗</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="exp-header">
-      <div>
-        <div class="section-tag reveal">Experience</div>
-        <h2 class="section-heading reveal">Where I've<br><em>shipped</em></h2>
-      </div>
-      <p class="exp-intro reveal">
-        Professional work building production systems for real users —
-        not just side projects. Every item here is live and in active use.
-      </p>
-    </div>
-
-    <div class="exp-list">
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-date">2023 — Present</div>
-          <div class="exp-company">Asman Web</div>
-          <div class="exp-location">Karaj, Iran</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Frontend Developer</div>
-          <p class="exp-desc">
-            Sole frontend developer responsible for the complete UI of an automotive dealership management platform.
-            Built two separate production applications — an internal staff portal and a customer-facing client portal —
-            from architecture to deployment. Designed data-flow between systems, implemented real-time updates,
-            role-based access control, and complex form workflows.
-          </p>
-          <div class="exp-tags">
-            <span class="tag">React</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Redux Toolkit</span>
-            <span class="tag">TanStack Query</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">JWT Auth</span>
-            <span class="tag">REST API</span>
-            <span class="tag">Socket.io</span>
+        <div class="hero-stats" aria-label="Professional highlights">
+          <div>
+            <div class="stat-num">1+</div>
+            <div class="stat-label">Year professional</div>
+          </div>
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Live projects</div>
+          </div>
+          <div>
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Tools & skills</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="skills">
-    <div class="skills-header">
-      <div>
-        <div class="section-tag reveal">Tech Stack</div>
-        <h2 class="section-heading reveal">What I <em>build</em> with</h2>
+      <div class="hero-right">
+        <div class="float-tag"><span class="dot">▪</span>Next.js App Router</div>
+        <div class="float-tag"><span class="dot">▪</span>TypeScript</div>
+        <div class="photo-frame">
+          <img src="ILYA.png" width="437" height="570" alt="Ilya Aghaei" decoding="async" />
+        </div>
+        <div class="float-tag"><span class="dot">▪</span>REST / WebSocket</div>
+        <div class="float-tag"><span class="dot">▪</span>Accessible UI</div>
+        <div class="hero-social">
+          <a href="https://github.com/XLIYA" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:xilyag@gmail.com">Email</a>
+        </div>
       </div>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-col reveal">
-        <div class="skill-col-label">Core Framework</div>
-        <ul class="skill-list">
-          <li>React (Functional + Hooks)</li>
-          <li>Next.js (App Router)</li>
-          <li>TypeScript</li>
-          <li>JavaScript (ES2022+)</li>
-          <li>JSX / Component Architecture</li>
-          <li>Atomic Design Pattern</li>
-        </ul>
-      </div>
-      <div class="skill-col reveal">
-        <div class="skill-col-label">State & Data</div>
-        <ul class="skill-list">
-          <li>Redux Toolkit</li>
-          <li>Redux Thunk / Persist</li>
-          <li>TanStack React Query</li>
-          <li>Context API + useReducer</li>
-          <li>React Hook Form + Zod</li>
-          <li>Axios / Fetch</li>
-        </ul>
-      </div>
-      <div class="skill-col reveal">
-        <div class="skill-col-label">Styling & UI</div>
-        <ul class="skill-list">
-          <li>Tailwind CSS</li>
-          <li>Framer Motion</li>
-          <li>CSS Modules / JSS</li>
-          <li>Styled Components</li>
-          <li>Material UI / Headless UI</li>
-          <li>Responsive Web Design</li>
-        </ul>
-      </div>
-      <div class="skill-col reveal">
-        <div class="skill-col-label">Network & Tools</div>
-        <ul class="skill-list">
-          <li>REST API / JSON</li>
-          <li>WebSockets / Socket.io</li>
-          <li>GraphQL</li>
-          <li>JWT + Cookie Auth</li>
-          <li>SSR / ISR / CSR / SSG</li>
-          <li>Git & Gitflow / Figma</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="projects-header">
-      <div>
-        <div class="section-tag reveal">Selected Work</div>
-        <h2 class="section-heading reveal">Production<br><em>projects</em></h2>
+    <div class="marquee-strip" aria-label="Technology stack">
+      <div class="marquee-track">
+        <span class="marquee-item"><span>◆</span>React</span>
+        <span class="marquee-item"><span>◆</span>Next.js</span>
+        <span class="marquee-item"><span>◆</span>TypeScript</span>
+        <span class="marquee-item"><span>◆</span>JavaScript</span>
+        <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
+        <span class="marquee-item"><span>◆</span>TanStack Query</span>
+        <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
+        <span class="marquee-item"><span>◆</span>Material UI</span>
+        <span class="marquee-item"><span>◆</span>Zod</span>
+        <span class="marquee-item"><span>◆</span>React Hook Form</span>
+        <span class="marquee-item"><span>◆</span>Node.js</span>
+        <span class="marquee-item"><span>◆</span>REST</span>
+        <span class="marquee-item"><span>◆</span>GraphQL</span>
+        <span class="marquee-item"><span>◆</span>Socket.io</span>
+        <span class="marquee-item"><span>◆</span>Git</span>
+        <span class="marquee-item"><span>◆</span>Figma</span>
+
+        <span class="marquee-item"><span>◆</span>React</span>
+        <span class="marquee-item"><span>◆</span>Next.js</span>
+        <span class="marquee-item"><span>◆</span>TypeScript</span>
+        <span class="marquee-item"><span>◆</span>JavaScript</span>
+        <span class="marquee-item"><span>◆</span>Redux Toolkit</span>
+        <span class="marquee-item"><span>◆</span>TanStack Query</span>
+        <span class="marquee-item"><span>◆</span>Tailwind CSS</span>
+        <span class="marquee-item"><span>◆</span>Material UI</span>
+        <span class="marquee-item"><span>◆</span>Zod</span>
+        <span class="marquee-item"><span>◆</span>React Hook Form</span>
+        <span class="marquee-item"><span>◆</span>Node.js</span>
+        <span class="marquee-item"><span>◆</span>REST</span>
+        <span class="marquee-item"><span>◆</span>GraphQL</span>
+        <span class="marquee-item"><span>◆</span>Socket.io</span>
+        <span class="marquee-item"><span>◆</span>Git</span>
+        <span class="marquee-item"><span>◆</span>Figma</span>
       </div>
-      <p class="projects-intro reveal">
-        Both projects are live, serving real users in production.
-        Built as the sole frontend developer with full ownership of architecture, UX, and delivery.
-      </p>
     </div>
 
-    <div class="project-card reveal-scale">
-      <div class="project-num">01</div>
-      <div class="project-card-inner">
-        <div>
-          <div class="project-platform">Asman Web Platform · Internal Tool</div>
-          <h3 class="project-title">Parts Lifecycle Management System</h3>
-          <p class="project-desc">
-            Designed and built the complete frontend architecture for an automotive parts tracking system
-            used daily by dealership staff. The system manages the full lifecycle of vehicle parts —
-            from intake to delivery — with real-time status updates and role-based permissions.
-            Implemented complex multi-step workflows, data tables with filtering/sorting,
-            and a notification system for critical status changes.
+    <section id="about">
+      <div class="about-left">
+        <div class="section-tag reveal">About Me</div>
+        <h2 class="section-heading reveal">Built for <em>production</em></h2>
+        <div class="about-text reveal">
+          <p>
+            Front-end developer with 1+ year of professional experience building responsive,
+            production-grade web applications with React, Next.js, and TypeScript.
           </p>
-          <div class="project-outcome">
-            <div class="outcome-icon">→</div>
-            <div class="outcome-text">
-              <strong class="accent-text">Result:</strong> Eliminated manual spreadsheet tracking,
-              reduced follow-up calls between teams, and significantly improved operational transparency across the dealership.
+          <p>
+            I focus on maintainable component architecture, predictable state management,
+            secure API integration, and interfaces that feel clear on every device. I learn fast,
+            work well in collaborative teams, and care about shipping useful products.
+          </p>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="info-row reveal">
+          <div class="info-label">Location</div>
+          <div class="info-value">Karaj, Alborz — Iran</div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:xilyag@gmail.com">xilyag@gmail.com</a></div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Phone</div>
+          <div class="info-value"><a href="tel:+989101877006">+98 910 187 7006</a></div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">GitHub</div>
+          <div class="info-value"><a href="https://github.com/XLIYA" target="_blank" rel="noopener noreferrer">github.com/XLIYA</a></div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">LinkedIn</div>
+          <div class="info-value"><a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener noreferrer">linkedin.com/in/ilya-ag</a></div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Education</div>
+          <div class="info-value">B.Sc. Computer Engineering — Islamic Azad University, Karaj (in progress)</div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Bootcamp</div>
+          <div class="info-value">React.js Bootcamp — Maktab Sharif · 7 months</div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Languages</div>
+          <div class="info-value">Persian (Native) · English (Intermediate)</div>
+        </div>
+        <div class="info-row reveal">
+          <div class="info-label">Status</div>
+          <div class="info-value status-value">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to front-end opportunities
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="exp-header">
+        <div>
+          <div class="section-tag reveal">Experience</div>
+          <h2 class="section-heading reveal">Where I've<br><em>shipped</em></h2>
+        </div>
+        <p class="exp-intro reveal">
+          Professional product work across SaaS dashboards, portals, streaming experiences,
+          and payment flows. The focus: reliable interfaces, clean code, and real users.
+        </p>
+      </div>
+
+      <div class="exp-list">
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-date">May 2025 — May 2026</div>
+            <div class="exp-company">MRB Group</div>
+            <div class="exp-location">Royaye Bartar Consultants · Karaj</div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-role">Front-End Developer</div>
+            <p class="exp-desc">
+              Built and shipped production web apps including the Asman dealership platform,
+              using React, Next.js App Router, TypeScript, Tailwind CSS, and Material UI.
+            </p>
+            <ul class="exp-points">
+              <li>Managed application and server state with Redux Toolkit, React Context, and TanStack Query.</li>
+              <li>Integrated REST and WebSocket APIs with secure JWT/cookie auth and NextAuth flows.</li>
+              <li>Built accessible, mobile-first layouts with consistent cross-device behavior.</li>
+              <li>Worked in an agile team with Git/Gitflow, Jira, and regular code reviews.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Redux Toolkit</span>
+              <span class="tag">TanStack Query</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Material UI</span>
+              <span class="tag">JWT / Cookies</span>
+              <span class="tag">Socket.io</span>
             </div>
           </div>
-          <div class="exp-tags">
-            <span class="tag">Next.js · App Router</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Redux Toolkit</span>
-            <span class="tag">Server Actions</span>
-            <span class="tag">Tailwind CSS</span>
-          </div>
-        </div>
-        <div class="project-meta">
-          <div>
-            <div class="project-tech-label">Key challenges solved</div>
-            <ul class="skill-list project-skill-list">
-              <li>Complex state across multi-step flows</li>
-              <li>Role-based UI (staff vs. manager)</li>
-              <li>Real-time status sync via polling</li>
-              <li>Offline-resilient data handling</li>
-            </ul>
-          </div>
-          <div class="project-links">
-            <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="project-link">
-              <span>View Live</span>
-              <span class="project-link-icon">↗</span>
-            </a>
-            <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="project-link">
-              <span>GitHub</span>
-              <span class="project-link-icon">↗</span>
-            </a>
-          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="project-card reveal-scale project-card-spaced">
-      <div class="project-num">02</div>
-      <div class="project-card-inner">
+    <section id="skills">
+      <div class="skills-header">
         <div>
-          <div class="project-platform">Asman Web Platform · Customer Portal</div>
-          <h3 class="project-title">Customer Follow-Up & Status Portal</h3>
-          <p class="project-desc">
-            Built a separate customer-facing web application with a completely different UX focus —
-            clarity and simplicity for non-technical users. The portal gives customers real-time visibility
-            into their vehicle service and parts orders. Deliberately architected with clear data boundaries
-            from the internal system, with API-driven status updates and a mobile-first responsive design.
-          </p>
-          <div class="project-outcome">
-            <div class="outcome-icon">→</div>
-            <div class="outcome-text">
-              <strong class="accent-text">Result:</strong> Reduced inbound customer support requests,
-              increased customer trust through proactive communication, and freed up staff time from manual status calls.
+          <div class="section-tag reveal">Tech Stack</div>
+          <h2 class="section-heading reveal">What I <em>build</em> with</h2>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col reveal">
+          <div class="skill-col-label">Core Frontend</div>
+          <ul class="skill-list">
+            <li>React (Functional + Hooks)</li>
+            <li>Next.js (App Router)</li>
+            <li>TypeScript</li>
+            <li>JavaScript (ES2022+)</li>
+            <li>Node.js fundamentals</li>
+            <li>Component Architecture</li>
+          </ul>
+        </div>
+        <div class="skill-col reveal">
+          <div class="skill-col-label">State & Data</div>
+          <ul class="skill-list">
+            <li>Redux Toolkit</li>
+            <li>TanStack React Query</li>
+            <li>React Context</li>
+            <li>React Hook Form</li>
+            <li>Zod validation</li>
+            <li>Axios / Fetch</li>
+          </ul>
+        </div>
+        <div class="skill-col reveal">
+          <div class="skill-col-label">UI & Product</div>
+          <ul class="skill-list">
+            <li>Tailwind CSS</li>
+            <li>Material UI</li>
+            <li>Responsive Web Design</li>
+            <li>Accessible interactions</li>
+            <li>Motion & micro-interactions</li>
+            <li>Figma handoff</li>
+          </ul>
+        </div>
+        <div class="skill-col reveal">
+          <div class="skill-col-label">APIs & Workflow</div>
+          <ul class="skill-list">
+            <li>REST API / JSON</li>
+            <li>GraphQL</li>
+            <li>WebSockets / Socket.io</li>
+            <li>JWT / Cookie Auth / NextAuth</li>
+            <li>Git & Gitflow</li>
+            <li>Jira / Code Reviews</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="projects-header">
+        <div>
+          <div class="section-tag reveal">Selected Work</div>
+          <h2 class="section-heading reveal">Production<br><em>projects</em></h2>
+        </div>
+        <p class="projects-intro reveal">
+          Updated from the latest resume: three live products covering dealership operations,
+          music streaming, and vehicle purchase payment workflows.
+        </p>
+      </div>
+
+      <div class="project-card reveal-scale">
+        <div class="project-num">01</div>
+        <div class="project-card-inner">
+          <div>
+            <div class="project-platform">B2B SaaS · Automotive Dealerships</div>
+            <h3 class="project-title">Asman — Dealership Management Platform</h3>
+            <p class="project-desc">
+              Built the front-end for a dealership management platform with authentication,
+              dashboards, customer management, smart parts-order tracking from order to delivery,
+              customer surveys, analytics, and warehouse/inventory modules.
+            </p>
+            <div class="project-outcome">
+              <div class="outcome-icon">→</div>
+              <div class="outcome-text">
+                <strong class="accent-text">Result:</strong> Gave dealership teams a clearer operational system for
+                customers, inventory, parts status, surveys, and reporting in one product experience.
+              </div>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Next.js App Router</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Redux Toolkit</span>
+              <span class="tag">TanStack Query</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Socket.io</span>
             </div>
           </div>
-          <div class="exp-tags">
-            <span class="tag">React · Next.js</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">TanStack Query</span>
-            <span class="tag">API Integration</span>
-            <span class="tag">Mobile-first</span>
-          </div>
-        </div>
-        <div class="project-meta">
-          <div>
-            <div class="project-tech-label">Key challenges solved</div>
-            <ul class="skill-list project-skill-list">
-              <li>System boundary — separate from staff portal</li>
-              <li>Mobile-first for non-tech users</li>
-              <li>Real-time order tracking UI</li>
-              <li>Optimistic UI for responsiveness</li>
-            </ul>
-          </div>
-          <div class="project-links">
-            <a href="https://asman-web.liara.run" target="_blank" rel="noopener" class="project-link">
-              <span>View Live</span>
-              <span class="project-link-icon">↗</span>
-            </a>
-            <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="project-link">
-              <span>GitHub</span>
-              <span class="project-link-icon">↗</span>
-            </a>
+          <div class="project-meta">
+            <div>
+              <div class="project-tech-label">Key features shipped</div>
+              <ul class="skill-list project-skill-list">
+                <li>Authentication and role-aware dashboards</li>
+                <li>Customer and dealership workflows</li>
+                <li>Smart parts-order tracking</li>
+                <li>Warehouse, inventory, surveys, and analytics</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://asman-web.ir" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Live</span>
+                <span class="project-site">asman-web.ir</span>
+                <span class="project-link-icon">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <div class="contact-left">
-      <div class="section-tag reveal">Contact</div>
-      <h2 class="contact-cta reveal">
-        Let's build<br />
-        <em>something great.</em>
-      </h2>
-      <p class="contact-sub reveal">
-        I'm looking for roles where code quality, ownership, and system thinking matter.
-        Open to full-time positions, freelance, and remote work.
-      </p>
-      <a href="mailto:xilyag@gmail.com" class="btn-primary reveal contact-btn">
-        Send a message →
-      </a>
-    </div>
-    <div class="contact-right">
-      <a href="mailto:xilyag@gmail.com" class="contact-link reveal">
-        <div>
-          <div class="contact-link-label">Email</div>
-          <div class="contact-link-value">xilyag@gmail.com</div>
+      <div class="project-card reveal-scale project-card-spaced">
+        <div class="project-num">02</div>
+        <div class="project-card-inner">
+          <div>
+            <div class="project-platform">Music Streaming · Persian Experience</div>
+            <h3 class="project-title">Wavify — Music Streaming Platform</h3>
+            <p class="project-desc">
+              Built a Persian-language music streaming app with personalized Made For You
+              recommendations, mood and tempo-based mixes, weekly trending charts, community
+              playlists, a personal library, track uploads, and built-in chat.
+            </p>
+            <div class="project-outcome">
+              <div class="outcome-icon">→</div>
+              <div class="outcome-text">
+                <strong class="accent-text">Result:</strong> Created a content-rich streaming interface with discovery,
+                personalization, upload, library, and social layers built into the product flow.
+              </div>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Personalization UI</span>
+              <span class="tag">Chat</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-tech-label">Key features shipped</div>
+              <ul class="skill-list project-skill-list">
+                <li>Made For You recommendations</li>
+                <li>Mood and tempo-based mixes</li>
+                <li>Trending charts and community playlists</li>
+                <li>Personal library, uploads, and built-in chat</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://wavify.ir" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Live</span>
+                <span class="project-site">wavify.ir</span>
+                <span class="project-link-icon">↗</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <span class="contact-arrow">↗</span>
-      </a>
-      <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener" class="contact-link reveal">
-        <div>
-          <div class="contact-link-label">LinkedIn</div>
-          <div class="contact-link-value">ilya-ag</div>
+      </div>
+
+      <div class="project-card reveal-scale project-card-spaced">
+        <div class="project-num">03</div>
+        <div class="project-card-inner">
+          <div>
+            <div class="project-platform">Payment Portal · Vehicle Purchases</div>
+            <h3 class="project-title">Asia Khodro — Car Deposit Payment Portal</h3>
+            <p class="project-desc">
+              Implemented the responsive front-end for an online car deposit payment portal,
+              including form handling, validation, and a clean multi-step flow for vehicle purchase deposits.
+            </p>
+            <div class="project-outcome">
+              <div class="outcome-icon">→</div>
+              <div class="outcome-text">
+                <strong class="accent-text">Result:</strong> Improved clarity and trust in a sensitive payment journey
+                with step-by-step UI, validation feedback, and a mobile-first layout.
+              </div>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React Hook Form</span>
+              <span class="tag">Zod</span>
+              <span class="tag">Payment UX</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-tech-label">Key features shipped</div>
+              <ul class="skill-list project-skill-list">
+                <li>Responsive payment flow</li>
+                <li>Form handling and validation</li>
+                <li>Multi-step deposit experience</li>
+                <li>Clear mobile-first purchase journey</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://asiakhodro9117.ir" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Live</span>
+                <span class="project-site">asiakhodro9117.ir</span>
+                <span class="project-link-icon">↗</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <span class="contact-arrow">↗</span>
-      </a>
-      <a href="https://github.com/XLIYA" target="_blank" rel="noopener" class="contact-link reveal">
-        <div>
-          <div class="contact-link-label">GitHub</div>
-          <div class="contact-link-value">XLIYA</div>
-        </div>
-        <span class="contact-arrow">↗</span>
-      </a>
-      <a href="tel:+989101877006" class="contact-link reveal">
-        <div>
-          <div class="contact-link-label">Phone</div>
-          <div class="contact-link-value">+98 910 187 7006</div>
-        </div>
-        <span class="contact-arrow">↗</span>
-      </a>
-    </div>
-  </section>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-left">
+        <div class="section-tag reveal">Contact</div>
+        <h2 class="contact-cta reveal">
+          Let's build<br />
+          <em>something useful.</em>
+        </h2>
+        <p class="contact-sub reveal">
+          I'm looking for front-end roles where product quality, clean React architecture,
+          and reliable delivery matter. Open to full-time, remote, and freelance work.
+        </p>
+        <a href="mailto:xilyag@gmail.com" class="btn-primary reveal contact-btn">
+          Send a message →
+        </a>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:xilyag@gmail.com" class="contact-link reveal">
+          <div>
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">xilyag@gmail.com</div>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="tel:+989101877006" class="contact-link reveal">
+          <div>
+            <div class="contact-link-label">Phone</div>
+            <div class="contact-link-value">+98 910 187 7006</div>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener noreferrer" class="contact-link reveal">
+          <div>
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">linkedin.com/in/ilya-ag</div>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://github.com/XLIYA" target="_blank" rel="noopener noreferrer" class="contact-link reveal">
+          <div>
+            <div class="contact-link-label">GitHub</div>
+            <div class="contact-link-value">github.com/XLIYA</div>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-brand">ILYA<span>.</span></div>
-    <div class="footer-copy">© 2025 Ilya Aghaei — All rights reserved</div>
+    <div class="footer-copy">© <span id="year">2026</span> Ilya Aghaei — All rights reserved</div>
     <div class="footer-links">
-      <a href="https://github.com/XLIYA" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/XLIYA" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/ilya-ag" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:xilyag@gmail.com">Email</a>
     </div>
   </footer>
