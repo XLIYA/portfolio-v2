@@ -37,13 +37,24 @@
 
   <nav id="nav" aria-label="Primary navigation">
     <a href="#hero" class="nav-logo" aria-label="Ilya Aghaei home">ILYA<span>.</span></a>
-    <ul class="nav-links">
+    <button
+      id="mobileMenuButton"
+      class="mobile-menu-button"
+      type="button"
+      aria-controls="primaryNavLinks"
+      aria-expanded="false"
+      aria-label="Open navigation"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <ul class="nav-links" id="primaryNavLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Let's Talk</a>
+    <a href="#contact" class="nav-cta" id="navContactLink">Let's Talk</a>
   </nav>
 
   <main>
@@ -68,7 +79,7 @@
             <div class="stat-label">Year professional</div>
           </div>
           <div>
-            <div class="stat-num">3</div>
+            <div class="stat-num">5</div>
             <div class="stat-label">Live projects</div>
           </div>
           <div>
@@ -300,8 +311,8 @@
           <h2 class="section-heading reveal">Production<br><em>projects</em></h2>
         </div>
         <p class="projects-intro reveal">
-          Updated from the latest resume: three live products covering dealership operations,
-          music streaming, and vehicle purchase payment workflows.
+          Five live products spanning dealership operations, music streaming, vehicle payments,
+          collaborative planning, and a Persian e-commerce experience.
         </p>
       </div>
 
@@ -439,6 +450,105 @@
               <a href="https://asiakhodro9117.ir" target="_blank" rel="noopener noreferrer" class="project-link">
                 <span>View Live</span>
                 <span class="project-site">asiakhodro9117.ir</span>
+                <span class="project-link-icon">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-scale project-card-spaced">
+        <div class="project-num">04</div>
+        <div class="project-card-inner">
+          <div>
+            <div class="project-platform">Collaborative PWA · Weekly Planning</div>
+            <h3 class="project-title">Rudo Quest — Team Task Management</h3>
+            <p class="project-desc">
+              Built a compact collaborative task-management PWA for small teams, bringing today's
+              priorities, the current week, project ownership, and team responsibilities into one calm,
+              focused workspace without heavy workflows.
+            </p>
+            <div class="project-outcome">
+              <div class="outcome-icon">→</div>
+              <div class="outcome-text">
+                <strong class="accent-text">Result:</strong> Made weekly planning and ownership visible
+                at a glance, helping teams move from scattered tasks to a shared view of what matters now.
+              </div>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Drizzle</span>
+              <span class="tag">Sentry</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">Vitest</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-tech-label">Key features shipped</div>
+              <ul class="skill-list project-skill-list">
+                <li>Account creation and sign-in</li>
+                <li>Today and weekly planning views</li>
+                <li>Team collaboration and ownership</li>
+                <li>Installable, focused PWA experience</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://rudo-quest.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Live</span>
+                <span class="project-site">rudo-quest.vercel.app</span>
+                <span class="project-link-icon">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-scale project-card-spaced">
+        <div class="project-num">05</div>
+        <div class="project-card-inner">
+          <div>
+            <div class="project-platform">Persian E-Commerce · Accessories</div>
+            <h3 class="project-title">Indigo Accessories — Mood-Led Storefront</h3>
+            <p class="project-desc">
+              Built a responsive Persian accessories store with expressive product discovery,
+              mood-led categories, search, product pages, favorites, customer profiles, ratings,
+              and reviews in a polished right-to-left shopping experience.
+            </p>
+            <div class="project-outcome">
+              <div class="outcome-icon">→</div>
+              <div class="outcome-text">
+                <strong class="accent-text">Result:</strong> Turned a distinct visual identity into a
+                clear end-to-end storefront that stays expressive, readable, and easy to browse on mobile.
+              </div>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Vitest</span>
+              <span class="tag">RTL UI</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="project-meta">
+            <div>
+              <div class="project-tech-label">Key features shipped</div>
+              <ul class="skill-list project-skill-list">
+                <li>Product catalog, categories, and search</li>
+                <li>Product details and favorites</li>
+                <li>Customer profile experience</li>
+                <li>Ratings, reviews, and responsive RTL UI</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://indigo-accessories.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Live</span>
+                <span class="project-site">indigo-accessories.vercel.app</span>
                 <span class="project-link-icon">↗</span>
               </a>
             </div>
