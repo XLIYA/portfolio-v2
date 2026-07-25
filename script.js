@@ -3,6 +3,8 @@ const cursorRing = document.getElementById('cursorRing');
 const nav = document.getElementById('nav');
 const scrollProgress = document.getElementById('scrollProgress');
 const year = document.getElementById('year');
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const navContactLink = document.getElementById('navContactLink');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canUseCustomCursor =
@@ -11,6 +13,36 @@ const canUseCustomCursor =
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+
+function setMobileMenu(open) {
+  nav?.classList.toggle('is-open', open);
+  document.body.classList.toggle('is-menu-open', open);
+  mobileMenuButton?.setAttribute('aria-expanded', String(open));
+  mobileMenuButton?.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+}
+
+mobileMenuButton?.addEventListener('click', () => {
+  setMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
+});
+
+document.querySelectorAll('.nav-links a').forEach((link) => {
+  link.addEventListener('click', () => setMobileMenu(false));
+});
+
+navContactLink?.addEventListener('click', () => setMobileMenu(false));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setMobileMenu(false);
+    mobileMenuButton?.focus();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    setMobileMenu(false);
+  }
+});
 
 function updateScrollUi() {
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;

@@ -186,6 +186,34 @@ nav.scrolled {
 
 .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
+.mobile-menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line2);
+  background: rgba(10,10,10,0.72);
+  color: var(--fg);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mobile-menu-button span {
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease);
+}
+
+nav.is-open .mobile-menu-button span:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+nav.is-open .mobile-menu-button span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
 /* ── Section base ───────────────────────────────────────────── */
 section { position: relative; }
 
@@ -1130,12 +1158,63 @@ footer {
 /* ── Mobile ─────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   body { cursor: auto; }
+  body.is-menu-open { overflow: hidden; }
   .cursor, .cursor-ring { display: none; }
 
-  nav { padding: 20px 24px; }
+  nav {
+    min-height: 72px;
+    padding: 14px 24px;
+    background: rgba(10,10,10,0.92);
+    border-color: var(--line);
+    backdrop-filter: blur(20px);
+  }
+
   nav.scrolled { padding: 14px 24px; }
+  .mobile-menu-button { display: flex; }
 
   .nav-links, .nav-cta { display: none; }
+
+  nav.is-open .nav-links {
+    position: fixed;
+    inset: 72px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 32px 24px 120px;
+    overflow-y: auto;
+    background:
+      radial-gradient(circle at 90% 0%, rgba(232,213,163,0.1), transparent 32%),
+      rgba(10,10,10,0.98);
+    border-top: 1px solid var(--line);
+  }
+
+  nav.is-open .nav-links li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.is-open .nav-links a {
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+
+  nav.is-open .nav-cta {
+    position: fixed;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 52px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+  }
 
   #hero { grid-template-columns: 1fr; min-height: auto; }
 
