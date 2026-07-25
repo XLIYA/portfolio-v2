@@ -217,6 +217,23 @@ nav.is-open .mobile-menu-button span:last-child {
 /* ── Section base ───────────────────────────────────────────── */
 section { position: relative; }
 
+#hero > *,
+#about > *,
+.exp-header > *,
+.exp-item > *,
+.skills-grid > *,
+.projects-header > *,
+.project-card-inner > *,
+#contact > * {
+  min-width: 0;
+}
+
+.info-value a,
+.project-site,
+.contact-link-value {
+  overflow-wrap: anywhere;
+}
+
 /* ── Reveal animations ──────────────────────────────────────── */
 .reveal {
   opacity: 0;
@@ -1321,8 +1338,95 @@ footer {
     border-right: none;
     border-top: 1px solid var(--line);
   }
-  .project-site { display: none; }
-  .contact-link { gap: 20px; }
+  .project-card-inner { padding: 30px 20px; }
+  .project-outcome { padding: 15px 16px; }
+  .project-link {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .project-site {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+    padding-right: 24px;
+  }
+  .contact-link {
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer-links { flex-wrap: wrap; }
+}
+
+@media (max-width: 380px) {
+  nav,
+  nav.scrolled {
+    padding: 12px 18px;
+  }
+
+  nav.is-open .nav-links {
+    padding-inline: 18px;
+  }
+
+  nav.is-open .nav-cta {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .hero-left { padding: 110px 18px 42px; }
+  .hero-right { padding: 42px 18px 52px; }
+  .hero-name {
+    font-size: clamp(44px, 17vw, 62px);
+    letter-spacing: -0.055em;
+  }
+  .hero-desc { font-size: 0.92rem; }
+  .photo-frame {
+    width: min(232px, 76vw);
+    height: auto;
+    aspect-ratio: 437 / 570;
+  }
+  .hero-social {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-left,
+  #experience,
+  #projects,
+  .contact-left {
+    padding-inline: 18px;
+  }
+
+  .about-right,
+  .contact-right {
+    padding-inline: 18px;
+  }
+
+  #skills .skills-header,
+  .skill-col {
+    padding-inline: 18px;
+  }
+
+  .exp-item::before {
+    left: -18px;
+    right: -18px;
+  }
+
+  .project-card-inner {
+    gap: 28px;
+    padding: 28px 16px;
+  }
+
+  .project-title { font-size: 1.5rem; }
+  .project-platform { line-height: 1.6; }
+  .project-num {
+    top: 16px;
+    right: 18px;
+    font-size: 2.6rem;
+  }
+
+  footer { padding-inline: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
