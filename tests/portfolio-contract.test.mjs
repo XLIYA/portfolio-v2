@@ -4,9 +4,9 @@ import test from 'node:test';
 
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 
-test('portfolio presents five live projects', () => {
-  assert.match(html, /<div class="stat-num">5<\/div>/);
-  assert.equal((html.match(/class="project-card reveal-scale/g) ?? []).length, 5);
+test('portfolio presents six live projects', () => {
+  assert.match(html, /<div class="stat-num">6<\/div>/);
+  assert.equal((html.match(/class="project-card reveal-scale/g) ?? []).length, 6);
   assert.match(html, /href="https:\/\/rudo-quest\.vercel\.app\/"/);
   assert.match(html, /href="https:\/\/indigo-accessories\.vercel\.app\/"/);
 });
@@ -17,7 +17,7 @@ test('new project cards present the verified product names and technologies', ()
     'Indigo Accessories',
     'Drizzle',
     'Sentry',
-    'Vite',
+    'Next.js Route Handlers',
     'Supabase',
     'Vitest',
   ]) {
